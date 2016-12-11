@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 mod_main = Blueprint('main', __name__)
 
@@ -8,4 +8,4 @@ def index():
     ''' Renders the App index page.
     :return:
     '''
-    return "Welcome to the Flask App."
+    return render_template('index.html')
