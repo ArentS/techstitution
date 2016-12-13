@@ -1,15 +1,5 @@
 {% extends "layout.html" %} {% block head %} {{ super() }} {% endblock %} {% block content %}
-<script>
-    $(document).ready(function () {
-        $('.emri_nder').change(function () {
-            var vlera = $(this).val();
-            if (vlera.length < 6) {
-                alert('Keni gabuar')
-                $(this).focus();
-            }
-        });
-    });
-</script>
+
 <!-- Description -->
 <div class="description-container">
     <div class="container">
@@ -37,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 msf-form">
-                <form role="form" action="" method="post" class="form-inline">
+                <form role="form" action="" method="post" class="form-inline" id="reg_form">
                     <fieldset>
                         <h4>QËLLIMI I NJOFTIMIT <span class="step">(Hapi 1 / 8)</span></h4>
                         <div class="radio-buttons-1">
@@ -59,37 +49,52 @@
                         <div class="form-group">
                             <label for="emri_nder"><strong>Emri i Ndërmarrësit (Entiteti):</strong></label>
                             <br>
-                            <input type="text" name="emri_nder" class="emri_nder form-control" id="emri_nder"> </div>
+                            <div class="form-group">
+                                <input type="text" name="emri_nder" class="emri_nder form-control" id="emri_nder"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="nr_biz"><strong>Numri i Regjistrimit të Biznesit:</strong></label>
                             <br>
-                            <input type="text" name="nr_biz" class="nr_biz form-control" id="nr_biz"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_biz" class="nr_biz form-control" id="nr_biz">
+                            </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="nr_fiskal"><strong>Numri fiskal:</strong></label>
                             <br>
-                            <input type="text" name="nr_fiskal" class="nr_fiskal form-control" id="nr_fiskal"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_fiskal" class="nr_fiskal form-control" id="nr_fiskal"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="adresa"><strong>Adresa:</strong></label>
                             <br>
-                            <input type="text" name="adresa" class="adresa form-control" id="adresa"> </div>
+                            <div class="form-group">
+                                <input type="text" name="adresa" class="adresa form-control" id="adresa"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="nr_tel"><strong>Numri i Telefonit:</strong></label>
                             <br>
-                            <input type="text" name="nr_tel" class="nr_tel form-control" id="nr_tel"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_tel" class="nr_tel form-control" id="nr_tel"> </div>
+                        </div>
                         <br>
                         <div class="form-group ">
                             <label for="nr_fax"><strong>Numri i Faksit:</strong></label>
                             <br>
-                            <input type="text" name="nr_fax" class="nr_fax form-control" id="nr_fax"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_fax" class="nr_fax form-control" id="nr_fax"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="email"><strong>Email:</strong></label>
                             <br>
-                            <input type="text" name="email" class="email form-control" id="email"> </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="email form-control" id="email"> </div>
+                        </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
                         <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
@@ -99,32 +104,44 @@
                         <div class="form-group">
                             <label for="emri_zyrtarit"><strong>Emri i zyrtarit:</strong></label>
                             <br>
-                            <input type="text" name="emri_zyrtarit" class="emri_zyrtarit form-control" id="emri_zyrtarit"> </div>
+                            <div class="form-group">
+                                <input type="text" name="emri_zyrtarit" class="emri_zyrtarit form-control" id="emri_zyrtarit"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="adresa_zyrtarit"><strong>Adresa:</strong></label>
                             <br>
-                            <input type="text" name="adresa_zyrtarit" class="adresa_zyrtarit form-control" id="adresa_zyrtarit"> </div>
+                            <div class="form-group">
+                                <input type="text" name="adresa_zyrtarit" class="adresa_zyrtarit form-control" id="adresa_zyrtarit"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="nr_tel_zyrtarit"><strong>Numri i Telefonit:</strong></label>
                             <br>
-                            <input type="text" name="nr_tel_zyrtarit" class="nr_tel_zyrtarit form-control" id="nr_tel_zyrtarit"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_tel_zyrtarit" class="nr_tel_zyrtarit form-control" id="nr_tel_zyrtarit"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="nr_fax_zyrtarit"><strong>Numri i Faksit:</strong></label>
                             <br>
-                            <input type="text" name="nr_fax_zyrtarit" class="nr_fax_zyrtarit form-control" id="nr_fax_zyrtarit"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_fax_zyrtarit" class="nr_fax_zyrtarit form-control" id="nr_fax_zyrtarit"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="email_zyrtarit"><strong>E-mail adresa:</strong></label>
                             <br>
-                            <input type="text" name="email_zyrtarit" class="email_zyrtarit form-control" id="email_zyrtarit"> </div>
+                            <div class="form-group">
+                                <input type="text" name="email_zyrtarit" class="email_zyrtarit form-control" id="email_zyrtarit"> </div>
+                        </div>
                         <br>
                         <div class="form-group">
                             <label for="nr_id"><strong>Numri i ID:</strong></label>
                             <br>
-                            <input type="text" name="nr_id" class="nr_id form-control" id="nr_id"> </div>
+                            <div class="form-group">
+                                <input type="text" name="nr_id" class="nr_id form-control" id="nr_id"> </div>
+                        </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
                         <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
@@ -133,7 +150,6 @@
                         <h4> AKTIVITETET TË CILAT NJOFTOHEN/CREGJISTROHEN: <span class="step">(Hapi 4 / 8)</span></h4>
                         <div class="form-group col-sm-12" style="padding-left:40%; padding-right:40%;text-align:left;">
                             <p><strong>1. Ofrimi i rrjetit publik fiks:</strong></p>
-                            
                             <label class="radio-inline">
                                 <input type="radio" name="radio-buttons-2-options" value="lokal" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Lokal</strong> </label>
                             <br>
@@ -215,7 +231,8 @@
                             <label class="radio-inline">
                                 <input type="radio" name="radio-buttons-9-options" value="trans_internet"> <strong>Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit) </strong></label>
                         </div>
-                        <br><br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
                         <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
                             <p><strong>9. Ofrimi i shërbimeve me vlerë të shtuar:</strong></p>
                             <label class="radio-inline">
@@ -231,7 +248,9 @@
                             <div class="col-sm-6">
                                 <label for="about-you"></label>
                                 <br>
-                                <label style="text-align:left;"><strong> ● A do të përdoret rrjeti vetanak apo ndonjë rrjet tjetër,
+                                <label style="text-align:left;">
+                                    <br>
+                                    <br> <strong> ● A do të përdoret rrjeti vetanak apo ndonjë rrjet tjetër,
                                     <br> ● Teknologjia e cila do të përdoret,
                                     <br> ● Radio frekuencat, të cilat planifikohen të përdoren
                                     <br> ● Lista e shërbimeve që planifikohen të ofrohen,
@@ -240,7 +259,9 @@
                             <div class="col-sm-6">
                                 <label for="about-you"><strong>Të jepen përshkrime të detajuara për secilin aktivitet të njoftuar duke specifikuar:</strong></label>
                                 <br>
-                                <textarea name="about-you" class="about-you form-control" id="about-you"></textarea>
+                                <div class="form-group">
+                                    <textarea style="width:350px;" name="about_you" class="about-you form-control" id="about-you"></textarea>
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -250,7 +271,9 @@
                             <div class="col-sm-12">
                                 <label for="about-you"><strong>(Të specifikohet koha e parashikuar për fillimin e aktivitetit të komunikimeve elektronike):</strong></label>
                                 <br>
-                                <textarea style="height: 50px;" name="about-you2" class="about-you form-control" id="about-you"></textarea>
+                                <div class="form-group">
+                                    <textarea style="height: 80px;" name="about_you2" class="about-you form-control" id="about-you2"></textarea>
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -260,13 +283,25 @@
                     <fieldset>
                         <h4>DOKUMENTET E BASHKANGJITURA: <span class="step">(Hapi 6 / 8)</span></h4>
                         <div class="form-group"> <span><strong>1. Kopje e certifikatës së regjistrimit të biznesit</strong></span>
-                            <input type="file" /> <span class="fileinput-filename"></span>
                             <br>
-                            <br> <span style="float:left;"><strong>2. Kopje e Certifikatës së numrit fiskal</strong></span>
-                            <input type="file" /> <span class="fileinput-filename"></span>
+                            <div class="form-group">
+                                <input name="cer_biznesit" type="file" /> <span class="fileinput-filename"></span></div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group"> <span><strong>2. Kopje e Certifikatës së numrit fiskal</strong></span>
                             <br>
-                            <br> <span><strong>3. Kopje e dokumentit ‘Informatë mbi biznesin</strong></span>
-                            <input type="file" /> <span class="fileinput-filename"></span> </div>
+                            <div class="form-group">
+                                <input name="cert_fiskal" type="file" /> <span class="fileinput-filename"></span></div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group"> <span><strong>3. Kopje e dokumentit ‘Informatë mbi biznesin</strong></span>
+                            <br>
+                            <div class="form-group">
+                                <input name="info_biz" type="file" /> <span class="fileinput-filename"></span></div>
+                        </div>
+                        <br>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
                         <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
@@ -288,8 +323,8 @@
                     </fieldset>
                     <fieldset>
                         <h4>DETYRIMET LIGJORE: <span class="step">(Hapi 8 / 8)</span></h4>
-                       <div class="form-group col-sm-12" style="padding-left:250px; padding-right:250px;">
-                           <label for="about-you" style="color:red;">Para se te dergoni formen, ju lutem lexoni detyrimet ligjore:</label>
+                        <div class="form-group col-sm-12" style="padding-left:250px; padding-right:250px;">
+                            <label for="about-you" style="color:red;">Para se te dergoni formen, ju lutem lexoni detyrimet ligjore:</label>
                             <br>
                             <label style="text-align:left;"><strong> ● Unë nëpërmjet këtij dokumenti deklaroj se do të ushtroj aktivitet në fushën e komunikimeve elektronike të shënuara më sipër dhe aplikoj për regjistrim në regjistrin e ofrueseve të rrjeteve dhe shërbimeve të komunikimeve elektronike të Autoritetit (ARKEP).
                                 <br><br> ● Unë nëpërmjet këtij dokumenti deklaroj se kam mbyllur aktivitetet e komunikimeve elektronike të shënuara më sipër.
@@ -303,7 +338,6 @@
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
                         <button type="submit" class="btn">Submit</button>
                     </fieldset>
-                    
                 </form>
             </div>
         </div>
