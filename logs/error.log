@@ -122,3 +122,186 @@ Traceback (most recent call last):
   File "/home/arent/Desktop/dev/techstitution/app/templates/index.html", line 357, in template
     {% endblock %}
 TemplateSyntaxError: Encountered unknown tag 'endblock'.
+Exception on / [POST]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 20, in index
+    return json_util.dumbs(data)
+AttributeError: 'module' object has no attribute 'dumbs'
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/arent/Desktop/dev/techstitution/app/mod_main/views.py", line 34, in get_doc
+    doc = db.find_one({"_id":ObjectId(id)})
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/arent/Desktop/dev/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
