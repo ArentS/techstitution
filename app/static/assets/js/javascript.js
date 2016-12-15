@@ -1,6 +1,6 @@
  $(document).ready(function () {
      $('#reg_form').bootstrapValidator({
-         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+         
          feedbackIcons: {
              valid: 'glyphicon glyphicon-ok'
              , invalid: 'glyphicon glyphicon-remove'
@@ -18,7 +18,7 @@
                          , message: 'Min 5 karaktere'
                      }
                      , notEmpty: {
-                         message: 'Ju lutem, shkruani merin e nderrmarrjes'
+                         message: 'Ju lutem, shkruani emrin e nderrmarrjes'
                      }
                  }
              }
@@ -180,13 +180,13 @@
          ,cer_biznesit: {
                 validators: {
                     notEmpty: {
-                        message: 'Please select an image'
+                        message: 'Ju lutem, zgjedheni nje dokument'
                     },
                     file: {
-                        extension: 'jpeg,jpg,png',
-                        type: 'image/jpeg,image/png',
-                        maxSize: 2097152,   // 2048 * 1024
-                        message: 'The selected file is not valid'
+                        extension: 'jpeg,jpg,png,doc,pdf',
+                        type: 'image/jpeg,image/png,application/msword,application/pdf',
+                        
+                        message: 'Ju lutem, futni file jpeg, jpg, png, doc, pdf!'
                     }
                 }
             },cert_fiskal: {
@@ -195,10 +195,10 @@
                         message: 'Please select an image'
                     },
                     file: {
-                        extension: 'jpeg,jpg,png',
-                        type: 'image/jpeg,image/png',
-                        maxSize: 2097152,   // 2048 * 1024
-                        message: 'The selected file is not valid'
+                        extension: 'jpeg,jpg,png,doc,pdf',
+                        type: 'image/jpeg,image/png,application/msword,application/pdf',
+                        
+                        message: 'Ju lutem, futni file jpeg, jpg, png, doc, pdf!'
                     }
                 }
             },info_biz: {
@@ -207,10 +207,10 @@
                         message: 'Please select an image'
                     },
                     file: {
-                        extension: 'jpeg,jpg,png',
-                        type: 'image/jpeg,image/png',
-                        maxSize: 2097152,   // 2048 * 1024
-                        message: 'The selected file is not valid'
+                        extension: 'jpeg,jpg,png,doc,pdf',
+                        type: 'image/jpeg,image/png,application/msword,application/pdf',
+                       
+                        message: 'Ju lutem, futni file jpeg, jpg, png, doc, pdf!'
                     }
                 }
             },}

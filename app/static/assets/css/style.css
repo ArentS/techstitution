@@ -125,3 +125,12 @@ ul.navbar-nav {
 .msf-form form .selects-1,
 .msf-form form .selects-2 { display: inline-block; margin: 0 0 20px 0; }
 
+/* Css Error i Bootstrap Validator*/
+#reg_form .has-error .control-label,
+#reg_form .has-error .help-block,
+#reg_form .has-error .form-control-feedback {
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
