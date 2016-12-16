@@ -7,6 +7,14 @@
              , validating: 'glyphicon glyphicon-refresh'
          }
          , fields: {
+             radio_buttons_1_options: {
+                validators: {
+                    notEmpty: {
+                        message: 'The gender is required'
+                    }
+                }
+            },
+             
              emri_nder: {
                  validators: {
                      regexp: {
@@ -50,7 +58,7 @@
                  validators: {
                      stringLength: {
                          min: 8
-                     , }
+                     , message: 'Min 8 karaktere'}
                      , notEmpty: {
                          message: 'Ju lutem, shkruani adresen'
                      }

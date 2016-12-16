@@ -32,15 +32,18 @@
                         <h4>QËLLIMI I NJOFTIMIT <span class="step">(Hapi 1 / 8)</span></h4>
                         <div class="radio-buttons-1">
                             <p><strong>Ju lutem, zgjedhni qellimin e njoftimit:</strong></p>
-                            <label class="radio">
-                                <input type="radio" name="radio-buttons-1-options" value="fillimi_i_sherbimit"><strong> Fillimi i sherbimit</strong> </label>
+                            <div class="radio">
+                            <label >
+                                <input type="radio" name="radio_buttons_1_options" value="fillimi_i_sherbimit"><strong> Fillim sherbimi</strong> </label></div>
                             <br>
-                            <label class="radio">
-                                <input type="radio" name="radio-buttons-1-options" value="shtim_sherbimi"><strong> Shtim sherbimi</strong> </label>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="radio_buttons_1_options" value="shtim_sherbimi"><strong> Shtim sherbimi</strong> </label></div>
                             <br>
-                            <label class="radio">
-                                <input type="radio" name="radio-buttons-1-options" value="heqje_sherbimi"><strong> Heqje sherbimi</strong> </label>
-                            <br> </div>
+                            <div class="radio">
+                            <label >
+                                <input type="radio" name="radio_buttons_1_options" value="heqje_sherbimi"><strong> Heqje sherbimi</strong> </label></div>
+                             </div>
                         <br>
                         <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
                     </fieldset>
@@ -148,95 +151,112 @@
                     </fieldset>
                     <fieldset>
                         <h4> AKTIVITETET TË CILAT NJOFTOHEN/CREGJISTROHEN: <span class="step">(Hapi 4 / 8)</span></h4>
-                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:40%;text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:20%;text-align:left;">
                             <p><strong>1. Ofrimi i rrjetit publik fiks:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-2-options" value="lokal" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Lokal</strong> </label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox_buttons_2_options[]" value="lokal" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Lokal</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-2-options" value="nacional" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Nacional</strong> </label>
+                            <div class="checkbox">
+                            <label >
+                                <input type="checkbox" name="checkbox_buttons_2_options[]" value="nacional" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Nacional</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-2-options" value="tjera_rrjet_fiks" onclick="javascript:yesnoCheck();" id="yesCheck"><strong>Tjera</strong> </label>
+                            <div class="checkbox">
+                            <label >
+                                <input type="checkbox" name="checkbox_buttons_2_options[]" value="tjera_rrjet_fiks" onclick="javascript:yesnoCheck();" id="yesCheck"><strong>Tjera</strong> </label>
                             <div id="ifYes" style="visibility:hidden"><strong> Shkruaj:</strong>
                                 <input type='text' id='yes' name='yes'>
-                                <br> </div>
+                                <br> </div></div>
                         </div>
                         <br>
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:20%; text-align:left; ">
                             <p><strong>2. Ofrimi i shërbimeve publike fikse:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-3-options" value="tel_lokal" onclick="javascript:yesnoCheck2();" id="noCheck2"><strong>Shërbime telefonike lokale/nacionale</strong> </label>
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options" value="tel_lokal" onclick="javascript:yesnoCheck2();" id="noCheck2"><strong>Shërbime telefonike lokale/nacionale</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-3-options" value="tel_nderkombetar" onclick="javascript:yesnoCheck2();" id="noCheck2"> <strong>Shërbime telefonike ndërkombëtare</strong> </label>
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options" value="tel_nderkombetar" onclick="javascript:yesnoCheck2();" id="noCheck2"> <strong>Shërbime telefonike ndërkombëtare</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-3-options" value="tel_publik_pagese" onclick="javascript:yesnoCheck2();" id="noCheck2"> <strong>Telefona publik me pagesë</strong> </label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options" value="tel_publik_pagese" onclick="javascript:yesnoCheck2();" id="noCheck2"> <strong>Telefona publik me pagesë</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-3-options" value="sherb_tjera" onclick="javascript:yesnoCheck2();" id="yesCheck2"><strong> Shërbime tjera</strong> </label>
+                             <div class="checkbox">
+                                <label >
+                                <input type="checkbox" name="checkbox-buttons-3-options" value="sherb_tjera" onclick="javascript:yesnoCheck2();" id="yesCheck2"><strong> Shërbime tjera</strong> </label>
                             <div id="ifYes2" style="visibility:hidden"><strong> Shkruaj: </strong>
                                 <input type='text' id='yes' name='yes'>
-                                <br> </div>
+                                <br> </div></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:30%; text-align:left;">
                             <p><strong>3. Ofrimi i rrjetit publik mobil:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-4-options" value="mob_lokal"><strong> Lokal </strong></label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-4-options" value="mob_lokal"><strong> Lokal </strong></label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-4-options" value="mob_nac"><strong> Nacional </strong></label>
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-4-options" value="mob_nac"><strong> Nacional </strong></label></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
                             <p><strong>4. Ofrimi i shërbimeve publike mobile:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-5-options" value="tel_ze"><strong> Shërbime telefonike të zërit</strong> </label>
+                           <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-5-options" value="tel_ze"><strong> Shërbime telefonike të zërit</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-5-options" value="trans_dhena"> <strong>Transmetim të dhënash</strong> </label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-5-options" value="trans_dhena"> <strong>Transmetim të dhënash</strong> </label></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
                             <p><strong>5. Ofrimi i shërbimeve të linjave me qira:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-6-options" value="fiber_optik"><strong> Fibër optik të pa-ndriçuar</strong> </label>
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-6-options" value="fiber_optik"><strong> Fibër optik të pa-ndriçuar</strong> </label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-6-options" value="linja_qera"> <strong>Linja tjera me qira </strong></label>
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-6-options" value="linja_qera"> <strong>Linja tjera me qira </strong></label></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
                             <p><strong>6. Ofrimi i rrjetave publike me transmetim satelitor:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-7-options" value="trans_satelit"><strong> Ofrimi i rrjetave publike me transmetim satelitor </strong></label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-7-options" value="trans_satelit"><strong> Ofrimi i rrjetave publike me transmetim satelitor </strong></label></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
                             <p><strong>7. Ofrimi i shërbimeve publike satelitore:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-8-options" value="publ_satelit"><strong> Ofrimi i shërbimeve publike satelitore</strong> </label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-8-options" value="publ_satelit"><strong> Ofrimi i shërbimeve publike satelitore</strong> </label></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
                             <p><strong>8. Ofrimi i shërbimeve të transmetimit të të dhënave (Internetit):</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-9-options" value="trans_internet"> <strong>Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit) </strong></label>
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-9-options" value="trans_internet"> <strong>Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit) </strong></label></div>
                         </div>
                         <br>
                         <br>&nbsp &nbsp &nbsp &nbsp &nbsp
-                        <div class="form-group col-sm-12" style="padding-left:40%; text-align:left;">
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
                             <p><strong>9. Ofrimi i shërbimeve me vlerë të shtuar:</strong></p>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-10-options" value="sherb_vlere_shtuar"><strong> Ofrimi i shërbimeve me vlerë të shtuar </strong></label>
+                           <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-10-options" value="sherb_vlere_shtuar"><strong> Ofrimi i shërbimeve me vlerë të shtuar </strong></label></div>
                         </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
@@ -336,7 +356,7 @@
                         </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-                        <button type="submit" class="btn">Submit</button>
+                        <button type="submit" class="btn" id="btn">Submit</button>
                     </fieldset>
                 </form>
             </div>
