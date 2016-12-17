@@ -17,6 +17,7 @@
     
   
     <!-- Javascript -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.validate.min.js')}}"></script>
     <script src="{{ url_for('static', filename='assets/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{ url_for('static', filename='assets/js/jquery.backstretch.min.js')}}"></script>
@@ -24,13 +25,81 @@
     <script src="{{ url_for('static', filename='assets/js/script.js')}}"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
     <script src="{{ url_for('static', filename='assets/js/javascript.js')}}"></script>
-    <script>
-        jQuery(document).ready(function () {
-            /*
-                Fullscreen background
-            */
-            $.backstretch("{{ url_for('static', filename='assets/img/backgrounds/1.jpg')}}");
+    <script> 
+        
+        $(function () {
+            $("input:radio[name=radio_buttons_1_options]").bind("change keyup",
+  function () {      
+      if ($('#radio_buttons_1_options:nth(0)').attr('checked',true) || $('#radio_buttons_2_options:nth(1)').attr('checked',true) || $('#radio_buttons_3_options:nth(2)').attr('checked',true))
+          $(this).closest("form").find("#next1").removeAttr("disabled");
+      else
+          $(this).closest("form").find("#next1").attr("disabled", "disabled");      
+            });
+            
+        $("#emri_nder, #nr_biz, #nr_fiskal, #adresa, #nr_tel, #email").bind("change keyup",
+  function () {      
+      if ($("#emri_nder").val() != "" && $("#nr_biz").val() != "" && $("#nr_fiskal").val() != "" && $("#adresa").val() != "" && $("#nr_tel").val() != "" && $("#email").val() != "")
+          $(this).closest("form").find("#next2").removeAttr("disabled");
+      else
+          $(this).closest("form").find("#next2").attr("disabled", "disabled");      
+      });
+             $.backstretch("{{ url_for('static', filename='assets/img/backgrounds/1.jpg')}}");
+            
+            $("#emri_zyrtarit, #adresa_zyrtarit, #nr_tel_zyrtarit, #email_zyrtarit, #nr_id").bind("change keyup",
+  function () {      
+      if ($("#emri_zyrtarit").val() != "" && $("#adresa_zyrtarit").val() != "" && $("#nr_tel_zyrtarit").val() != "" && $("#email_zyrtarit").val() != "" && $("#nr_id").val() != "")
+          $(this).closest("form").find("#next3").removeAttr("disabled");
+      else
+          $(this).closest("form").find("#next3").attr("disabled", "disabled");      
+      });
+            
+            $("#cer_biznesit, #cert_fiskal, #info_biz").bind("change keyup",
+  function () {      
+      if ($("#cer_biznesit").val() != "" && $("#cert_fiskal").val() != "" && $("#info_biz").val() != "")
+          $(this).closest("form").find("#next6").removeAttr("disabled");
+      else
+          $(this).closest("form").find("#next6").attr("disabled", "disabled");      
+      });
+            
+            $("input:radio[name=radio_buttons_11_options]").bind("change keyup",
+  function () {      
+      if ($('#po_konfirm:nth(0)').attr('checked',true) || $('#jo_konfirm:nth(1)').attr('checked',true))
+          $(this).closest("form").find("#next7").removeAttr("disabled");
+      else
+          $(this).closest("form").find("#next7").attr("disabled", "disabled");      
+            });
         });
+
+        
+        /*$(document).ready(function (){
+    validate();
+    $('#emri_nder').change(validate);
+            $.backstretch("{{ url_for('static', filename='assets/img/backgrounds/1.jpg')}}");
+});
+
+function validate(){
+    if ($('#emri_nder').val().length   >   0 )  {
+        $("#next2").prop("disabled", false);
+    }
+    else {
+        $("#next2").prop("disabled", true);
+    }
+        }*/
+        
+        /*jQuery(document).ready(function () {
+            
+
+                
+                $("form").submit(function(e){
+        var field1 = $("#emri_nder").val();
+         if(field1.length === 0) {
+             alert("ploteso fushen");
+             e.preventDefault(e);
+         }
+     });
+            
+            $.backstretch("{{ url_for('static', filename='assets/img/backgrounds/1.jpg')}}");
+        });*/
     </script>
 </head>
 

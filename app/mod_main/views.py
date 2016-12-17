@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request
 from bson import json_util, ObjectId
 from app import mongo
 
+
 mod_main = Blueprint('main', __name__)
 
 
@@ -20,7 +21,7 @@ def index():
         return json_util.dumps(data)
     else:
         return 'Bad request'
-    
+
 @mod_main.route('/<string:id>', methods=['GET'])
 def get_doc(id):
     

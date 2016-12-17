@@ -34,18 +34,18 @@
                             <p><strong>Ju lutem, zgjedhni qellimin e njoftimit:</strong></p>
                             <div class="radio">
                             <label >
-                                <input type="radio" name="radio_buttons_1_options" value="fillimi_i_sherbimit"><strong> Fillim sherbimi</strong> </label></div>
+                                <input type="radio" name="radio_buttons_1_options" id="radio_buttons_1_options" value="fillimi_i_sherbimit"><strong> Fillim sherbimi</strong> </label></div>
                             <br>
                             <div class="radio">
                             <label>
-                                <input type="radio" name="radio_buttons_1_options" value="shtim_sherbimi"><strong> Shtim sherbimi</strong> </label></div>
+                                <input type="radio" name="radio_buttons_1_options" id="radio_buttons_2_options" value="shtim_sherbimi"><strong> Shtim sherbimi</strong> </label></div>
                             <br>
                             <div class="radio">
                             <label >
-                                <input type="radio" name="radio_buttons_1_options" value="heqje_sherbimi"><strong> Heqje sherbimi</strong> </label></div>
+                                <input type="radio" name="radio_buttons_1_options" id="radio_buttons_3_options" value="heqje_sherbimi"><strong> Heqje sherbimi</strong> </label></div>
                              </div>
                         <br>
-                        <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+                        <button type="button" class="btn btn-next" id="next1" disabled>Next <i class="fa fa-angle-right"></i></button>
                     </fieldset>
                     <fieldset>
                         <h4>TË DHËNAT PËR NDËRRMARRËSIN <span class="step">(Hapi 2 / 8)</span></h4>
@@ -100,7 +100,7 @@
                         </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-                        <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+                        <button type="button" class="btn btn-next" id="next2" disabled>Next <i class="fa fa-angle-right"></i></button>
                     </fieldset>
                     <fieldset>
                         <h4>TË DHËNAT PËR ZYRTARIN LIGJËRISHT TË PËRGJEGJËSHËM <span class="step">(Hapi 3 / 8)</span></h4>
@@ -147,7 +147,7 @@
                         </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-                        <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+                        <button type="button" class="btn btn-next" id="next3" disabled>Next <i class="fa fa-angle-right"></i></button>
                     </fieldset>
                     <fieldset>
                         <h4> AKTIVITETET TË CILAT NJOFTOHEN/CREGJISTROHEN: <span class="step">(Hapi 4 / 8)</span></h4>
@@ -305,41 +305,42 @@
                         <div class="form-group"> <span><strong>1. Kopje e certifikatës së regjistrimit të biznesit</strong></span>
                             <br>
                             <div class="form-group">
-                                <input name="cer_biznesit" type="file" /> <span class="fileinput-filename"></span></div>
+                                <input id="cer_biznesit" name="cer_biznesit" type="file" /> <span class="fileinput-filename"></span></div>
                         </div>
                         <br>
                         <br>
                         <div class="form-group"> <span><strong>2. Kopje e Certifikatës së numrit fiskal</strong></span>
                             <br>
                             <div class="form-group">
-                                <input name="cert_fiskal" type="file" /> <span class="fileinput-filename"></span></div>
+                                <input id="cert_fiskal" name="cert_fiskal" type="file" /> <span class="fileinput-filename"></span></div>
                         </div>
                         <br>
                         <br>
                         <div class="form-group"> <span><strong>3. Kopje e dokumentit ‘Informatë mbi biznesin</strong></span>
                             <br>
                             <div class="form-group">
-                                <input name="info_biz" type="file" /> <span class="fileinput-filename"></span></div>
+                                <input id="info_biz" name="info_biz" type="file" /> <span class="fileinput-filename"></span></div>
                         </div>
                         <br>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-                        <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+                        <button type="button" class="btn btn-next" id="next6" disabled>Next <i class="fa fa-angle-right"></i></button>
                     </fieldset>
                     <fieldset>
                         <h4>KONFIRMIMI I NJOFTIMIT: <span class="step">(Hapi 7 / 8)</span></h4>
-                        <div class="form-group col-sm-12" style="padding-left:250px; padding-right:250px;">
-                            <label><strong>Ndërmarrja kërkon që t’i lëshohet certifikata e konfirmimit të njoftimit për ofrimin e rrjeteve dhe/ose shërbimeve publike të komunikimeve elektronike të njoftuara përmes këtij formulari:</strong></label>
+                        <div class="radio-buttons-1">
+                            <p><strong>Ndërmarrja kërkon që t’i lëshohet certifikata e konfirmimit të njoftimit për ofrimin e rrjeteve dhe/ose shërbimeve publike të komunikimeve elektronike të njoftuara përmes këtij formulari:</strong></p>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-11-options" value="po"> <strong>Po </strong></label>
+                            
+                            <div class="radio"><label>
+                                <input type="radio" name="radio-buttons-11-options" id="po_konfirm" value="po"> <strong>Po </strong></label></div>
                             <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="radio-buttons-11-options" value="jo"><strong> Jo</strong></label>
+                            <div class="radio"><label>
+                                <input type="radio" name="radio-buttons-11-options" id="jo_konfirm" value="jo"><strong> Jo</strong></label></div>
                             <br> </div>
                         <br>
                         <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-                        <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+                        <button type="button" class="btn btn-next" id="next7">Next <i class="fa fa-angle-right"></i></button>
                     </fieldset>
                     <fieldset>
                         <h4>DETYRIMET LIGJORE: <span class="step">(Hapi 8 / 8)</span></h4>
@@ -350,7 +351,7 @@
                                 <br><br> ● Unë nëpërmjet këtij dokumenti deklaroj se kam mbyllur aktivitetet e komunikimeve elektronike të shënuara më sipër.
                                 <br><br> ● Unë nëpërmjet këtij dokumenti deklaroj se kam mbyllur çdo aktivitet të komunikimeve elektronike nën regjimin e Autorizimit të përgjithshëm.
                                 <br><br> ● Unë nëpërmjet këtij dokumenti deklaroj se të dhënat e mia kanë pësuar ndryshime, sikurse përshkruhen në formular.
-                                <br><br> ● Unë nëpërmjet këtij dokumenti deklaroj se kam ndryshuar formën ligjore të ndërmarrjes sime siç përshkruhet në formular. Emri i vjetër është si më poshtë;<br> ___________________________________
+                                <br><br> ● Unë nëpërmjet këtij dokumenti deklaroj se kam ndryshuar formën ligjore të ndërmarrjes sime siç përshkruhet në formular. 
                                 <br><br> ● Unë nëpërmjet këtij dokumenti paraqes në ARKEP të gjithë dokumentacionin e nevojshëm ligjor dhe/ose të gjithë dokumentet që sigurojnë se nënshkruesi i këtij Njoftimi Regjistrimi ka lidhje me personin përfaqësues.
                                 <br><br> ● Unë deklaroj se informacioni që përfshihet në deklarimin e paraqitur, sikurse çdo informacion tjetër shoqërues , është i saktë dhe i vërtetë, dhe jam plotësisht i vetëdijshëm për faktin që, lidhur me angazhimin në çdo aktivitet të komunikimeve elektronike për të cilin është e nevojshme të sigurosh të drejtën e përdorimit për numeracion dhe frekuenca, të drejta të cilat nuk sigurohen nëpërmjet kësaj procedurë, unë duhet të paraqes një aplikim për të fituar të drejtat e përdorimit të cituara më sipër përpara fillimit të ofrimit të shërbimit.</strong> </label>
                         </div>

@@ -1,4 +1,8 @@
  $(document).ready(function () {
+     
+     
+     
+     
      $('#reg_form').bootstrapValidator({
          
          feedbackIcons: {
@@ -114,7 +118,8 @@
              , adresa_zyrtarit: {
                  validators: {
                      stringLength: {
-                         min: 8
+                         min: 8,
+                         message: 'Min 8 karaktere'
                      , }
                      , notEmpty: {
                          message: 'Ju lutem, shkruani adresen'
@@ -168,7 +173,9 @@
              , about_you: {
                  validators: {
                      stringLength: {
-                         min: 8
+                         min: 8,
+                         message: 'Ju lutem, shkruani sqarimin tuaj'
+
                      , }
                      , notEmpty: {
                          message: 'Ju lutem, shkruani adresen'
@@ -178,7 +185,8 @@
          , about_you2: {
                  validators: {
                      stringLength: {
-                         min: 8
+                         min: 8,
+                         message: 'Ju lutem, shkruani sqarimin tuaj'
                      , }
                      , notEmpty: {
                          message: 'Ju lutem, shkruani adresen'
@@ -200,7 +208,7 @@
             },cert_fiskal: {
                 validators: {
                     notEmpty: {
-                        message: 'Please select an image'
+                        message: 'Ju lutem, zgjedheni nje dokument'
                     },
                     file: {
                         extension: 'jpeg,jpg,png,doc,pdf',
@@ -212,7 +220,7 @@
             },info_biz: {
                 validators: {
                     notEmpty: {
-                        message: 'Please select an image'
+                        message: 'Ju lutem, zgjedheni nje dokument'
                     },
                     file: {
                         extension: 'jpeg,jpg,png,doc,pdf',
