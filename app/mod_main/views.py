@@ -86,11 +86,12 @@ def get_doc_to_update(id):
     
 @mod_main.route('/update', methods=["GET",'POST'])
 def update_doc():
+    
         db = mongo.db.arkep
         data = request.form.to_dict()
         id = data['_id']
         del data['_id']
-        #db.insert(data)
+        
         db.update(
            {'_id':ObjectId(id)},
           data,True
@@ -100,5 +101,5 @@ def update_doc():
             return redirect(url_for('main.lista'))
 
         else:
-            result = "Ka ndodhur gabim ne ruajten e te dhenave"
+            result = "Gabim ne ruajten e te dhenave"
             return render_template('lista.html', result=result, json=json_util.dumps(data))
