@@ -127,9 +127,9 @@
 
                     </tr>
                     <tr>
-                        <td>{{ doc['cer_biznesit']}}</td>
-                        <td>{{ doc['cert_fiskal']}}</td>
-                        <td>{{ doc['info_biz']}}</td>
+                        <td><a href="{{ url_for('main.uploaded_file',filename=filename)}}"><span style="color:  #ffffff; font-size: 18px;" class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>{{ doc['cer_biznesit']}}</td>
+                        <td><a href="{{ url_for('main.uploaded_file',filename=filename)}}"><span style="color:  #ffffff; font-size: 18px;" class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>{{ doc['cert_fiskal']}}</td>
+                        <td><a href="{{ url_for('main.uploaded_file',filename=filename)}}"><span style="color:  #ffffff; font-size: 18px;" class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>{{ doc['info_biz']}}</td>
                     </tr>
                 </table>
                 <br> 
