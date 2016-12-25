@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/media-queries.css')}}">
     
     
+    
+  
+
+    
   
     <!-- Javascript -->
     <script src="{{ url_for('static', filename='assets/js/jquery.validate.min.js')}}"></script>
@@ -25,6 +29,10 @@
     <script src="{{ url_for('static', filename='assets/js/script.js')}}"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
     <script src="{{ url_for('static', filename='assets/js/javascript.js')}}"></script>
+   
+  
+    
+    
     <script> 
         
         $(function () {
@@ -61,14 +69,16 @@
           $(this).closest("form").find("#next6").attr("disabled", "disabled");      
       });
             
-            $("input:radio[name=radio_buttons_11_options]").bind("change keyup",
+            $("input:radio[name=radio-buttons-11-options]").bind("change keyup",
   function () {      
-      if ($('#po_konfirm:nth(0)').attr('checked',true) || $('#jo_konfirm:nth(1)').attr('checked',true))
+      if ($('#po_konfirm').attr('checked',true))
           $(this).closest("form").find("#next7").removeAttr("disabled");
       else
           $(this).closest("form").find("#next7").attr("disabled", "disabled");      
             });
         });
+        
+        
 
         
         /*$(document).ready(function (){
@@ -103,6 +113,11 @@ function validate(){
     </script>
 </head>
 
-<body> {% block content %} {% endblock %} </body>
+<body> {% block content %} {% endblock %} 
+    <footer style="text-align:center;font-size:12px">
+					Adresa: Qyteza Pejton, Rr. Mujo Ulqinaku nr. 7, 10 000 Prishtinë, Republika e Kosovës
+					<br>Tel: + 381 (38) 212-345; Fax: + 381 (38) 212 399;
+					<br>E-mail: <a href="mailto:info@arkep-rks.org">info@arkep-rks.org</a>; web-site: <a href="http://www.arkep-rks.org/">www.arkep-rks.org</a>
+</footer></body>
 
 </html>

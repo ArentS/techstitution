@@ -1,6 +1,140 @@
-{% extends 'layout.html' %}
+{% extends "layout.html" %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+<!-- Description -->
+<div class="description-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 description-title">
+                <h2>ARKEP</h2> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 description-text"> <strong>
+	                    	AUTORITETI RREGULLATIV I KOMUNIKIMEVE ELEKTRONIKE DHE POSTARE
+                </strong>
+                <div class="divider-1"><strong>. . . . . . . . . . . . . . . .</strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="msf-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 msf-title">
+                <h4>TE DHENAT E DETAJUARA PER KOMPANINE</h4>
+                <br>
+                <br> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h5>OFRIMI I SHERBIMIT</h5>
+                <table class="table table-bordered" style="width:100%;">
+                    <tr>
+                        <th style="text-align: center;">Sherbimi</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>{{ doc['radio_buttons_1_options']}}</td>
+                      
+                    </tr>
+                </table>
+                
+                <h5>TË DHËNAT PËR NDËRMARRËSIN</h5>
+                <table class="table table-bordered" style="width:100%;">
+                    <tr>
+                        <th style="text-align: center;">Emri i Ndërmarrësit</th>
+                        <th style="text-align: center;">Numri i Regjistrimit të Biznesit</th>
+                        <th style="text-align: center;">Numri fiskal</th>
+                        <th style="text-align: center;">Adresa</th>
+                        <th style="text-align: center;">Numri i Telefonit</th>
+                        <th style="text-align: center;">Numri i Faksit</th>
+                        <th style="text-align: center;">Email</th>
+                    </tr>
+                    <tr>
+                        <td>{{ doc['emri_nder']}}</td>
+                        <td>{{ doc['nr_biz']}}</td>
+                        <td>{{ doc['nr_fiskal']}}</td>
+                        <td>{{ doc['adresa']}}</td>
+                        <td>{{ doc['nr_tel']}}</td>
+                        <td>{{ doc['nr_fax']}}</td>
+                        <td>{{ doc['email']}}</td>
+                    </tr>
+                </table>
+                <br>
+                <h5>TË DHËNAT PËR ZYRTARIN LIGJËRISHT TË PËRGJEGJËSHËM</h5>
+                <table class="table table-bordered" style="width:100%;">
+                    <tr>
+                        <th style="text-align: center;">Emri i zyrtarit</th>
+                        <th style="text-align: center;">Adresa</th>
+                        <th style="text-align: center;">Numri i Telefonit</th>
+                        <th style="text-align: center;">Numri i Fax-it</th>
+                        <th style="text-align: center;">Email Adresa</th>
+                        <th style="text-align: center;">Numri i ID-se</th>
+                    </tr>
+                    <tr>
+                        <td>{{ doc['emri_zyrtarit']}}</td>
+                        <td>{{ doc['adresa_zyrtarit']}}</td>
+                        <td>{{ doc['nr_tel_zyrtarit']}}</td>
+                        <td>{{ doc['nr_fax_zyrtarit']}}</td>
+                        <td>{{ doc['email_zyrtarit']}}</td>
+                        <td>{{ doc['nr_id']}}</td>
+                    </tr>
+                </table>
+                <br>
+                <h5>AKTIVITETET TË CILAT NJOFTOHEN/CREGJISTROHEN</h5>
+                <table class="table table-bordered" style="width:100%;">
+                    <tr>
+                        <th style="text-align: center;">Ofrimi i rrjetit publik fiks</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve publike fikse</th>
+                        <th style="text-align: center;">Ofrimi i rrjetit publik mobil</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve publike mobile</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve të linjave me qira</th>
+                        <th style="text-align: center;">Ofrimi i rrjetave publike me transmetim satelitor</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve publike satelitore</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve të transmetimit të të dhënave (Internetit)</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve me vlerë të shtuar</th>
+                    </tr>
+                    <tr>
+                        <td>{{ doc['checkbox_buttons_2_options1[]']}},{{ doc['checkbox_buttons_2_options2[]']}},{{ doc['yes']}}</td>
+                        <td>{{ doc['checkbox-buttons-3-options1[]']}}, {{ doc['checkbox-buttons-3-options2[]']}}, {{ doc['checkbox-buttons-3-options3[]']}}, {{ doc['yes2']}}</td>
+                        <td>{{ doc['checkbox-buttons-4-options1[]']}}, {{ doc['checkbox-buttons-4-options2[]']}}</td>
+                        <td>{{ doc['checkbox-buttons-5-options1[]']}}, {{ doc['checkbox-buttons-5-options2[]']}}</td>
+                        <td>{{ doc['checkbox-buttons-6-options1[]']}}, {{ doc['checkbox-buttons-6-options2[]']}}</td>
+                        <td>{{ doc['checkbox-buttons-7-options1[]']}}</td>
+                        <td>{{ doc['checkbox-buttons-8-options1[]']}}</td>
+                        <td>{{ doc['checkbox-buttons-9-options1[]']}}</td>
+                        <td>{{ doc['checkbox-buttons-10-options1[]']}}</td>
+                    </tr>
+                </table>
+                <br>
+                <h5>PËRSHKRIMI I AKTIVITETIT DHE FAZA E OFRIMIT</h5>
+                <table class="table table-bordered" style="width:100%;">
+                    <tr>
+                        <th style="text-align: center;">Përshkrime të detajuara për secilin aktivitet të njoftuar</th>
+                        <th style="text-align: center;">Ofrimi i shërbimeve publike fikse</th>
+                    </tr>
+                    <tr>
+                        <td>{{ doc['about_you']}}</td>
+                        <td>{{ doc['about_you2']}}</td>
+                    </tr>
+                </table>
+                <br> 
+            
+                <h5>DOKUMENTET E BASHKANGJITURA</h5>
+                <table class="table table-bordered" style="width:100%;">
+                    <tr>
+                        <th style="text-align: center;">Kopje e certifikatës së regjistrimit të biznesit</th>
+                        <th style="text-align: center;">Kopje e Certifikatës së numrit fiskal</th>
+                        <th style="text-align: center;">Kopje e dokumentit ‘Informatë mbi biznesin</th>
 
-{% block content %}
-Rezultati i kerkuar:
-{{ doc ['emri_nder']}}
-{% endblock %}
+                    </tr>
+                    <tr>
+                        <td>{{ doc['cer_biznesit']}}</td>
+                        <td>{{ doc['cert_fiskal']}}</td>
+                        <td>{{ doc['info_biz']}}</td>
+                    </tr>
+                </table>
+                <br> 
+                
+            </div>
+        </div>
+    </div>
+</div> {% endblock %}

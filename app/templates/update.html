@@ -1,0 +1,434 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% endblock %} {% block content %}
+
+<!-- Description -->
+<div class="description-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 description-title">
+                <h2>ARKEP</h2> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 description-text"> <strong>
+	                    	AUTORITETI RREGULLATIV I KOMUNIKIMEVE ELEKTRONIKE DHE POSTARE
+                </strong>
+                <div class="divider-1"><strong>. . . . . . . . . . . . . . . .</strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Multi Step Form -->
+<div class="msf-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 msf-title">
+                <h4>FORMULAR I NJOFTIMIT PËR HYRJE NË AKTIVITETIN E KOMUNIKIMEVE ELEKTRONIKE</h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 msf-form">
+                <form role="form" action="/update" method="post" class="form-inline" id="reg_form">
+                    
+                    
+                   
+                    <fieldset>
+                        <input name="_id" type="hidden" value="{{doc['_id']}}">
+                        <input type="hidden" name="radio_buttons_1_options" value="{{ doc['radio_buttons_1_options']}}">
+                        <h4>TË DHËNAT PËR NDËRRMARRËSIN <span class="step">(Hapi 2 / 8)</span></h4>
+                        <div class="form-group">
+                            <label for="emri_nder"><strong>Emri i Ndërmarrësit (Entiteti):</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['emri_nder']}}" name="emri_nder" class="emri_nder form-control" id="emri_nder"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nr_biz"><strong>Numri i Regjistrimit të Biznesit:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_biz']}}" name="nr_biz" class="nr_biz form-control" id="nr_biz">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nr_fiskal"><strong>Numri fiskal:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_fiskal']}}" name="nr_fiskal" class="nr_fiskal form-control" id="nr_fiskal"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="adresa"><strong>Adresa:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['adresa']}}" name="adresa" class="adresa form-control" id="adresa"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nr_tel"><strong>Numri i Telefonit:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_tel']}}" name="nr_tel" class="nr_tel form-control" id="nr_tel"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group ">
+                            <label for="nr_fax"><strong>Numri i Faksit:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_fax']}}" name="nr_fax" class="nr_fax form-control" id="nr_fax"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="email"><strong>Email:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['email']}}" name="email" class="email form-control" id="email"> </div>
+                        </div>
+                        <br>
+                        
+                        <button type="button" class="btn btn-next"  >Next <i class="fa fa-angle-right"></i></button>
+                    </fieldset>
+                    <fieldset>
+                        <h4>TË DHËNAT PËR ZYRTARIN LIGJËRISHT TË PËRGJEGJËSHËM <span class="step">(Hapi 3 / 8)</span></h4>
+                        <div class="form-group">
+                            <label for="emri_zyrtarit"><strong>Emri i zyrtarit:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['emri_zyrtarit']}}" name="emri_zyrtarit" class="emri_zyrtarit form-control" id="emri_zyrtarit"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="adresa_zyrtarit"><strong>Adresa:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['adresa_zyrtarit']}}" name="adresa_zyrtarit" class="adresa_zyrtarit form-control" id="adresa_zyrtarit"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nr_tel_zyrtarit"><strong>Numri i Telefonit:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_tel_zyrtarit']}}" name="nr_tel_zyrtarit" class="nr_tel_zyrtarit form-control" id="nr_tel_zyrtarit"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nr_fax_zyrtarit"><strong>Numri i Faksit:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_fax_zyrtarit']}}" name="nr_fax_zyrtarit" class="nr_fax_zyrtarit form-control" id="nr_fax_zyrtarit"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="email_zyrtarit"><strong>E-mail adresa:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['email_zyrtarit']}}" name="email_zyrtarit" class="email_zyrtarit form-control" id="email_zyrtarit"> </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nr_id"><strong>Numri i ID:</strong></label>
+                            <br>
+                            <div class="form-group">
+                                <input type="text" value="{{doc['nr_id']}}" name="nr_id" class="nr_id form-control" id="nr_id"> </div>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+                        <button type="button" class="btn btn-next"  >Next <i class="fa fa-angle-right"></i></button>
+                    </fieldset>
+                    
+                     <fieldset>
+                        <h4> AKTIVITETET TË CILAT NJOFTOHEN/CREGJISTROHEN: <span class="step">(Hapi 4 / 8)</span></h4>
+                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:20%;text-align:left;">
+                            <p><strong>1. Ofrimi i rrjetit publik fiks:</strong></p>
+                            {% if doc['checkbox_buttons_2_options1[]']=="Lokal" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox_buttons_2_options1[]" value="Lokal" onclick="javascript:yesnoCheck();" id="noCheck" checked><strong>Lokal</strong> </label></div>
+                            <br>
+                            
+                            {% elif doc['checkbox_buttons_2_options1[]']!="Lokal" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox_buttons_2_options1[]" value="Lokal" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Lokal</strong> </label></div> {% endif %}
+                            <br>
+                            
+                            {% if doc['checkbox_buttons_2_options2[]']=="Nacional" %}
+                            <div class="checkbox">
+                            <label >
+                                <input type="checkbox" name="checkbox_buttons_2_options2[]" value="Nacional" onclick="javascript:yesnoCheck();" id="noCheck" checked><strong>Nacional</strong> </label></div>
+                            <br>
+                            
+                            {% elif doc['checkbox_buttons_2_options2[]']!="Nacional" %}
+                            <div class="checkbox">
+                            <label >
+                                <input type="checkbox" name="checkbox_buttons_2_options2[]" value="Nacional" onclick="javascript:yesnoCheck();" id="noCheck"><strong>Nacional</strong> </label></div>
+                            
+                            {% endif %}
+                            <br>
+                            
+                            {% if doc['checkbox_buttons_2_options3[]']=="tjera_rrjet_fiks" %}
+                            
+                            <div class="checkbox">
+                            <label >
+                                <input type="checkbox" name="checkbox_buttons_2_options3[]" value="tjera_rrjet_fiks" onclick="javascript:yesnoCheck();" id="yesCheck" checked><strong>Tjera</strong> </label>
+                            <div id="ifYes"><strong> Shkruaj:</strong>
+                                <input type='text' id='yes' name='yes' value="{{ doc['yes']}}">
+                                <br> </div></div>
+                            
+                            {% elif doc['checkbox_buttons_2_options3[]']!="tjera_rrjet_fiks" %}
+                            
+                            <div class="checkbox">
+                            <label >
+                                <input type="checkbox" name="checkbox_buttons_2_options3[]" value="tjera_rrjet_fiks" onclick="javascript:yesnoCheck();" id="yesCheck" checked><strong>Tjera</strong> </label>
+                            <div id="ifYes" style="visibility:hidden"><strong> Shkruaj:</strong>
+                                <input type='text' id='yes' name='yes'>
+                                <br> </div></div>{% endif %}
+                            
+                        </div>
+                        <br>
+                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:20%; text-align:left; ">
+                            <p><strong>2. Ofrimi i shërbimeve publike fikse:</strong></p>
+                            
+                            {% if doc['checkbox-buttons-3-options1[]']=="Shërbime telefonike lokale/nacionale" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options1[]" value="Shërbime telefonike lokale/nacionale" onclick="javascript:yesnoCheck2();" id="noCheck2" checked><strong>Shërbime telefonike lokale/nacionale</strong> </label></div>
+                            
+                             {% elif doc['checkbox-buttons-3-options1[]']!="Shërbime telefonike lokale/nacionale" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options1[]" value="Shërbime telefonike lokale/nacionale" onclick="javascript:yesnoCheck2();" id="noCheck2"><strong>Shërbime telefonike lokale/nacionale</strong> </label></div>{% endif %}
+                            
+                            <br>
+                            {% if doc['checkbox-buttons-3-options2[]']=="Shërbime telefonike ndërkombëtare" %}
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options2[]" value="Shërbime telefonike ndërkombëtare" onclick="javascript:yesnoCheck2();" id="noCheck2" checked> <strong>Shërbime telefonike ndërkombëtare</strong> </label></div>
+                            
+                            {% elif doc['checkbox-buttons-3-options2[]']!="Shërbime telefonike ndërkombëtare" %}
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options2[]" value="Shërbime telefonike ndërkombëtare" onclick="javascript:yesnoCheck2();" id="noCheck2"> <strong>Shërbime telefonike ndërkombëtare</strong> </label></div>{% endif %}
+                            
+                            <br>
+                            
+                            {% if doc['checkbox-buttons-3-options3[]']=="Telefona publik me pagesë" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options3[]" value="Telefona publik me pagesë" onclick="javascript:yesnoCheck2();" id="noCheck2" checked> <strong>Telefona publik me pagesë</strong> </label></div>
+                            
+                            {% elif doc['checkbox-buttons-3-options3[]']!="Telefona publik me pagesë" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-3-options3[]" value="Telefona publik me pagesë" onclick="javascript:yesnoCheck2();" id="noCheck2" > <strong>Telefona publik me pagesë</strong> </label></div>{% endif %}
+                            
+                            <br>
+                            
+                            {% if doc['checkbox-buttons-3-options4[]']=="tjera_public_fiks" %}
+                             <div class="checkbox">
+                                <label >
+                                <input type="checkbox" name="checkbox-buttons-3-options4[]" value="tjera_public_fiks" onclick="javascript:yesnoCheck2();" id="yesCheck2" checked><strong> Shërbime tjera</strong> </label>
+                            <div id="ifYes2"><strong> Shkruaj: </strong>
+                                <input type='text' id='yes' name='yes2' value="{{doc['yes2']}}">
+                                <br> </div></div>
+                            
+                             {% elif doc['checkbox-buttons-3-options4[]']!="tjera_public_fiks" %}
+                             <div class="checkbox">
+                                <label >
+                                <input type="checkbox" name="checkbox-buttons-3-options4[]" value="tjera_public_fiks" onclick="javascript:yesnoCheck2();" id="yesCheck2"><strong> Shërbime tjera</strong> </label>
+                            <div id="ifYes2" style="visibility:hidden"><strong> Shkruaj: </strong>
+                                <input type='text' id='yes' name='yes2'>
+                                <br> </div></div>{% endif %}
+                            
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%; padding-right:30%; text-align:left;">
+                            <p><strong>3. Ofrimi i rrjetit publik mobil:</strong></p>
+                            
+                            {% if doc['checkbox-buttons-4-options1[]']=="Lokal" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-4-options1[]" value="Lokal" checked><strong> Lokal </strong></label></div>
+                            {% elif doc['checkbox-buttons-4-options1[]']!="Lokal" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-4-options1[]" value="Lokal"><strong> Lokal </strong></label></div>
+                            {% endif %}
+                            <br>
+                            {% if doc['checkbox-buttons-4-options2[]']=="Nacional" %}
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-4-options2[]" value="Nacional" checked><strong> Nacional </strong></label></div>
+                            {% elif doc['checkbox-buttons-4-options2[]']!="Nacional" %}
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-4-options2[]" value="Nacional"><strong> Nacional </strong></label></div> 
+                            {% endif %}
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
+                            <p><strong>4. Ofrimi i shërbimeve publike mobile:</strong></p>
+                           
+                            {% if doc['checkbox-buttons-5-options1[]']=="Shërbime telefonike të zërit" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-5-options1[]" value="Shërbime telefonike të zërit" checked><strong> Shërbime telefonike të zërit</strong> </label></div>
+                            
+                            {% elif doc['checkbox-buttons-5-options1[]']!="Shërbime telefonike të zërit" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-5-options1[]" value="Shërbime telefonike të zërit"><strong> Shërbime telefonike të zërit</strong> </label></div> {% endif %}
+                            <br>
+                            
+                            {% if doc['checkbox-buttons-5-options2[]']=="Transmetim të dhënash" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-5-options2[]" value="Transmetim të dhënash" checked> <strong>Transmetim të dhënash</strong> </label></div>
+                            
+                            {% elif doc['checkbox-buttons-5-options2[]']!="Transmetim të dhënash" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-5-options2[]" value="Transmetim të dhënash"> <strong>Transmetim të dhënash</strong> </label></div>{% endif %}
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
+                            <p><strong>5. Ofrimi i shërbimeve të linjave me qira:</strong></p>
+                           
+                            {% if doc['checkbox-buttons-6-options1[]']=="Fibër optik të pa-ndriçuar" %} 
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-6-options1[]" value="Fibër optik të pa-ndriçuar" checked><strong> Fibër optik të pa-ndriçuar</strong> </label></div>
+                            
+                            {% elif doc['checkbox-buttons-6-options1[]']!="Fibër optik të pa-ndriçuar" %} 
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-6-options1[]" value="Fibër optik të pa-ndriçuar"><strong> Fibër optik të pa-ndriçuar</strong> </label></div>{% endif %}
+                            <br>
+                            
+                            {% if doc['checkbox-buttons-6-options2[]']=="Linja tjera me qira" %} 
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-6-options2[]" value="Linja tjera me qira" checked> <strong>Linja tjera me qira </strong></label></div>
+                            
+                            {% elif doc['checkbox-buttons-6-options2[]']!="Linja tjera me qira" %} 
+                             <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-6-options2[]" value="Linja tjera me qira"> <strong>Linja tjera me qira </strong></label></div>{% endif %}
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
+                            <p><strong>6. Ofrimi i rrjetave publike me transmetim satelitor:</strong></p>
+                            
+                             {% if doc['checkbox-buttons-7-options1[]']=="Ofrimi i rrjetave publike me transmetim satelitor" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-7-options1[]" value="Ofrimi i rrjetave publike me transmetim satelitor" checked><strong> Ofrimi i rrjetave publike me transmetim satelitor </strong></label></div>
+                            
+                            {% elif doc['checkbox-buttons-7-options1[]']!="Ofrimi i rrjetave publike me transmetim satelitor" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-7-options1[]" value="Ofrimi i rrjetave publike me transmetim satelitor"><strong> Ofrimi i rrjetave publike me transmetim satelitor </strong></label></div>{% endif %}
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
+                            <p><strong>7. Ofrimi i shërbimeve publike satelitore:</strong></p>
+                            
+                             {% if doc['checkbox-buttons-8-options1[]']=="Ofrimi i shërbimeve publike satelitore" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-8-options1[]" value="Ofrimi i shërbimeve publike satelitore" checked><strong> Ofrimi i shërbimeve publike satelitore</strong> </label></div>
+                            
+                            {% elif doc['checkbox-buttons-8-options1[]']!="Ofrimi i shërbimeve publike satelitore" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-8-options1[]" value="Ofrimi i shërbimeve publike satelitore"><strong> Ofrimi i shërbimeve publike satelitore</strong> </label></div>{% endif %}
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
+                            <p><strong>8. Ofrimi i shërbimeve të transmetimit të të dhënave (Internetit):</strong></p>
+                            
+                            {% if doc['checkbox-buttons-9-options1[]']=="Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit)" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-9-options1[]" value="Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit)" checked> <strong>Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit) </strong></label></div>
+                            
+                            {% elif doc['checkbox-buttons-9-options1[]']!="Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit)" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-9-options1[]" value="Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit)"> <strong>Ofrimi i shërbimeve publike të transmetimit të të dhënave (internetit) </strong></label></div>{% endif %}
+                        </div>
+                        <br>
+                        <br>&nbsp &nbsp &nbsp &nbsp &nbsp
+                        <div class="form-group col-sm-12" style="padding-left:40%;padding-right:20%; text-align:left;">
+                            <p><strong>9. Ofrimi i shërbimeve me vlerë të shtuar:</strong></p>
+                           
+                            {% if doc['checkbox-buttons-10-options1[]']=="Ofrimi i shërbimeve me vlerë të shtuar" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-10-options1[]" value="Ofrimi i shërbimeve me vlerë të shtuar" checked><strong> Ofrimi i shërbimeve me vlerë të shtuar </strong></label></div>
+                            
+                            {% elif doc['checkbox-buttons-10-options1[]']!="Ofrimi i shërbimeve me vlerë të shtuar" %}
+                            <div class="checkbox">
+                                <label >
+                                    <input type="checkbox" name="checkbox-buttons-10-options1[]" value="Ofrimi i shërbimeve me vlerë të shtuar"><strong> Ofrimi i shërbimeve me vlerë të shtuar </strong></label></div>{% endif %}
+                            
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+                        <button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+                    </fieldset>
+                    <fieldset>
+                        <h4>PËRSHKRIMI I RRJETIT DHE/OSE SHËRBIMIT QË DO TË OFROHET: <span class="step">(Hapi 5 / 8)</span></h4>
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <label for="about-you"></label>
+                                <br>
+                                <label style="text-align:left;">
+                                    <br>
+                                    <br> <strong> ● A do të përdoret rrjeti vetanak apo ndonjë rrjet tjetër,
+                                    <br> ● Teknologjia e cila do të përdoret,
+                                    <br> ● Radio frekuencat, të cilat planifikohen të përdoren
+                                    <br> ● Lista e shërbimeve që planifikohen të ofrohen,
+                                    <br> ● Etj </strong></label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="about-you"><strong>Të jepen përshkrime të detajuara për secilin aktivitet të njoftuar duke specifikuar:</strong></label>
+                                <br>
+                                <div class="form-group">
+                                    <textarea style="width:350px;" name="about_you" class="about-you form-control" id="about-you" value="{{doc['about_you']}}">{{doc['about_you']}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <h4>Faza e Ofrimit</h4>
+                            <div class="col-sm-12">
+                                <label for="about-you2"><strong>(Të specifikohet koha e parashikuar për fillimin e aktivitetit të komunikimeve elektronike):</strong></label>
+                                <br>
+                                <div class="form-group">
+                                    <textarea style="height: 80px;" name="about_you2" class="about-you form-control" id="about-you2" value="{{doc['about_you2']}}">{{doc['about_you2']}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+                        <button type="submit" class="btn" id="btn">Submit</button>
+                        
+                         <input type="hidden" name="cer_biznesit" type="file" value="{{ doc['cer_biznesit']}}">
+                         <input type="hidden" name="cert_fiskal" type="file" value="{{ doc['cert_fiskal']}}">
+                         <input type="hidden" name="info_biz" type="file" value="{{ doc['info_biz']}}">
+                         <input type="hidden" name="radio-buttons-11-options" value="{{ doc['radio-buttons-11-options']}}">
+                    </fieldset>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div> {% endblock %}
